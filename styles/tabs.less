@@ -7,18 +7,25 @@
 
 .tab-bar {
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
 
   .tab {
-    color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
+    color: @text-color-off;
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+    cursor: pointer;
+
     &.active {
       color: @text-color-selected;
-      background-color: @tab-background-color-active;
+      background-color: @tab-background-color-active; // <- @editor-background-color
+      &[data-type="TextEditor"] {
+        background-color: @tab-background-color-active;
+      }
+      &[data-type="SettingsView"] {
+        background-color: @settings-background-color;
+      }
     }
 
 
@@ -28,6 +35,7 @@
       right: @component-padding + 4px; // 4px -> half of icon size
       margin-top: -3px;
       border-color: @text-color-info;
+      opacity: 1
     }
     &.modified:hover .close-icon {
       color: currentColor;
@@ -35,11 +43,15 @@
 
 
     // Close Icon (the X) -------------------
-    .close-icon:hover {
-      color: @text-color-selected;
+
+    .close-icon {
+      cursor: inherit;
+      opacity: 0;
+      color: @text-color-selected !important;
     }
-    &.active .close-icon:hover {
-      color: @text-color;
+
+    &.active .close-icon, &:hover .close-icon {
+      opacity: 1;
     }
 
 

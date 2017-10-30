@@ -18,3 +18,33 @@
     color: @text-color-selected;
   }
 }
+
+// tree panel
+atom-dock.left {
+  .tab-bar { // hide tittle Project
+    display: none;
+  }
+  .atom-dock-resize-handle-resizable.left {
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+  }
+  .tree-view {
+    .tree-view-root {
+      padding: 0 10px;
+    }
+    .project-root {
+      &:before {
+        content: none;
+      }
+      .project-root-header {
+        color: #fff;
+        height: @tab-height;
+        line-height: @tab-height;
+      }
+      li.entry {
+        color: hsl(0,0%,75%);
+      }
+    }
+  }
+}
