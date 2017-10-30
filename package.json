@@ -1,11 +1,12 @@
 {
-  "name": "ui-theme-template",
+  "name": "viscode-ui",
   "theme": "ui",
-  "version": "0.0.0",
-  "description": "A short description of your UI theme",
+  "version": "0.1.0",
+  "description": "Visual Studio Code theme for Atom editor",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "visual studio code"
   ],
   "repository": "https://github.com/atom-community/ui-theme-template",
   "license": "MIT",
