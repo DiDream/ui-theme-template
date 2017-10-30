@@ -1,7 +1,7 @@
 {
   "name": "viscode-ui",
   "theme": "ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Visual Studio Code theme for Atom editor",
   "keywords": [
     "ui",
