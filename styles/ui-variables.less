@@ -11,8 +11,11 @@
 // A good start is to change the color of the `@base-background-color` variable.
 
 @import "syntax-variables";
+@import "user-variables";
 
-// Text Colors
+/* defined variables in user-variables */
+
+/* Text Colors */
 @text-color:           hsl(0,0%,75%);
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
@@ -24,7 +27,7 @@
 @text-color-warning: hsl( 36,  60%, 72%);
 @text-color-error:   hsl(  9, 100%, 64%);
 
-// Background colors
+/* Background colors */
 @background-color-info:    hsl(208, 100%, 50%);
 @background-color-success: hsl(160,  70%, 36%);
 @background-color-warning: hsl(32,   60%, 50%);
@@ -34,11 +37,16 @@
 @background-color-selected:  lighten(@base-background-color, 10%);
 @app-background-color:       darken(@base-background-color, 5%);
 
-// Base colors
-@base-background-color: #252526;
+/* Base colors */
+// @base-background-color: 						#252526;
 @base-border-color:     darken(@base-background-color, 2%);
 
-// Component colors
+/* Component colors */
+// @header-panel-background-color: 		lighten(@base-background-color, 10%);
+// @footer-panel-backgrund-color: 		@header-panel-background-color;
+
+// @tree-view-background-color: 			@base-background-color;
+
 @pane-item-background-color: lighten(@base-background-color, 2%);
 @pane-item-border-color:     @base-border-color;
 
@@ -62,22 +70,11 @@
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
-
-
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-border-color;
-@tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: @editor-background-color;
+// @tab-background-color: 		@base-background-color;
+@tab-background-color-active: @syntax-background-color;
 @tab-border-color:            @base-border-color;
-
-
-@header-panel-background-color: lighten(@base-background-color, 10%);
-@footer-panel-backgrund-color: @header-panel-background-color;
-
-@tree-view-background-color: @base-background-color;
-@tree-view-border-color:     @base-border-color;
-
-@editor-background-color: @syntax-background-color;
 
 @settings-background-color: lighten(@base-background-color, 2%);
 @settings-menu-background-color: @settings-background-color;
